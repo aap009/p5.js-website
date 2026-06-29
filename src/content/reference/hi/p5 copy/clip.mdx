@@ -1,0 +1,41 @@
+---
+needsTranslation: true
+title: clip
+module: Color
+submodule: Setting
+file: src/color/setting.js
+description: >
+  <p>Defines a shape that will mask any shapes drawn afterward.</p>
+
+  <p>The first parameter, <code>callback</code>, is a function that defines the mask.
+
+  Any shapes drawn in  <code>callback</code> will add to the mask shape. The mask
+
+  will apply to anything drawn after <code>clip()</code> is called.</p>
+
+  <p>The second parameter, <code>options</code>, is optional. If an object with an
+  <code>invert</code>
+
+  property is passed, as in <code>beginClip({ invert: true })</code>, it will be used to
+
+  set the masking mode. <code>{ invert: true }</code> inverts the mask, creating holes
+
+  in shapes that are masked. <code>invert</code> is <code>false</code> by default.</p>
+
+  <p>Masks can be contained between the
+
+  <a href="/reference/p5/push/">push()</a> and <a href="/reference/p5/pop/">pop()</a> functions.
+
+  Doing so allows unmasked shapes to be drawn after masked shapes.</p>
+
+  <p>Masks can also be defined with <a href="/reference/p5/beginClip/">beginClip()</a>
+
+  and <a href="/reference/p5/endClip/">endClip()</a>.</p>
+---
+<!--
+  Auto-generated translation stub (hi).
+  Translate from the English source and remove needsTranslation when done.
+  English source: src/content/reference/en/p5 copy/clip.mdx
+-->
+
+<!-- Translation needed. Replace this placeholder with the translated content. -->
