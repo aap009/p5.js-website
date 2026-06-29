@@ -1,0 +1,136 @@
+---
+needsTranslation: true
+title: class
+module: Foundation
+submodule: Foundation
+file: src/core/reference.js
+description: >
+  <p>A template for creating objects of a particular type.</p>
+
+  <p>Classes can make it easier to program with objects. For example, a <code>Frog</code>
+
+  class could create objects that behave like frogs. Each object created
+
+  using a class is called an instance of that class. All instances of a class
+
+  are the same type. Here's an example of creating an instance of a <code>Frog</code>
+
+  class:</p>
+
+  <pre><code class="language-js">let fifi = new Frog(50, 50, 20);
+
+  </code></pre>
+
+  <p>The variable <code>fifi</code> refers to an instance of the <code>Frog</code> class. The
+  keyword
+
+  <code>new</code> is used to call the <code>Frog</code> class' constructor in the statement
+
+  <code>new Frog()</code>. Altogether, a new <code>Frog</code> object was created and assigned to
+
+  the variable <code>fifi</code>. Classes are templates, so they can be used to create
+
+  more than one instance:</p>
+
+  <pre><code class="language-js">// First Frog instance.
+
+  let frog1 = new Frog(25, 50, 10);
+
+
+  // Second Frog instance.
+
+  let frog2 = new Frog(75, 50, 10);
+
+  </code></pre>
+
+  <p>A simple <code>Frog</code> class could be declared as follows:</p>
+
+  <pre><code class="language-js">class Frog {
+    constructor(x, y, size) {
+      // This code runs once when an instance is created.
+      this.x = x;
+      this.y = y;
+      this.size = size;
+    }
+
+    show() {
+      // This code runs once when myFrog.show() is called.
+      textAlign(CENTER, CENTER);
+      textSize(this.size);
+      text('🐸', this.x, this.y);
+    }
+
+    hop() {
+      // This code runs once when myFrog.hop() is called.
+      this.x += random(-10, 10);
+      this.y += random(-10, 10);
+    }
+  }
+
+  </code></pre>
+
+  <p>Class declarations begin with the keyword <code>class</code> followed by the class
+
+  name, such as <code>Frog</code>, and curly braces <code>{}</code>. Class names should use
+
+  <code>PascalCase</code> and can't have spaces in their names. For example, naming a
+
+  class <code>Kermit The Frog</code> with spaces between each word would throw a
+
+  <code>SyntaxError</code>. The code between the curly braces <code>{}</code> defines the class.</p>
+
+  <p>Functions that belong to a class are called methods. <code>constructor()</code>,
+
+  <code>show()</code>, and <code>hop()</code> are methods in the <code>Frog</code> class. Methods
+  define an
+
+  object's behavior. Methods can accept parameters and return values, just
+
+  like functions. Note that methods don't use the <code>function</code> keyword.</p>
+
+  <p><code>constructor()</code> is a special method that's called once when an instance of
+
+  the class is created. The statement <code>new Frog()</code> calls the <code>Frog</code> class'
+
+  <code>constructor()</code> method.</p>
+
+  <p>A class definition is a template for instances. The keyword <code>this</code> refers
+
+  to an instance's data and methods. For example, each <code>Frog</code> instance has
+
+  unique coordinates stored in <code>this.x</code> and <code>this.y</code>. The <code>show()</code>
+  method
+
+  uses those coordinates to draw the frog. The <code>hop()</code> method updates those
+
+  coordinates when called. Once a <code>Frog</code> instance is created, its data and
+
+  methods can be accessed using the dot operator <code>.</code> as follows:</p>
+
+  <pre><code class="language-js">// Draw a lily pad.
+
+  fill('green');
+
+  stroke('green');
+
+  circle(fifi.x, fifi.y, 2 * fifi.size);
+
+
+  // Show the Frog.
+
+  fifi.show();
+
+
+  // Hop.
+
+  fifi.hop();
+
+  </code></pre>
+---
+<!--
+  Auto-generated translation stub (zh-Hans).
+  Translate from the English source and remove needsTranslation when done.
+  English source: src/content/reference/en/p5 copy/class.mdx
+-->
+
+<!-- Translation needed. Replace this placeholder with the translated content. -->
