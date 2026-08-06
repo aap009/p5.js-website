@@ -5,8 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "test": "node test-local.js",
-    "test:stubs": "node test-stubs.js"
+    "test": "node test-local.js"
   },
   "keywords": [
     "p5.js",
