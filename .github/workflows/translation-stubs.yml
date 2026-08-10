@@ -27,6 +27,11 @@ on:
         required: false
         default: 'examples,tutorials,text-detail,events,libraries'
         type: string
+      generate_stubs:
+        description: 'Generate stub files and open PRs'
+        required: false
+        default: true
+        type: boolean
 
 permissions:
   contents: write
@@ -53,7 +58,9 @@ jobs:
       - name: Generate stub files and open PRs
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          GENERATE_STUBS: 'true'
+
+          # Whether to generate stub files and open PRs (can choose on UI)
+          GENERATE_STUBS: ${{ github.event.inputs.generate_stubs || 'true' }}
 
           # The languages selection for the run (can type it on UI)
           STUB_LANGUAGES: ${{ github.event.inputs.languages || 'es,hi,ko,zh-Hans' }}
