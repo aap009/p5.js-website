@@ -1,5 +1,5 @@
 import { z, defineCollection } from "astro:content";
-import { relatedContent } from "../shared";
+import { needsTranslation, relatedContent } from "../shared";
 
 export const categories = [
   "introduction",
@@ -32,6 +32,7 @@ export const tutorialsCollection = defineCollection({
         featuredImage: image().optional(),
         featuredImageAlt: z.string().optional(),
         relatedContent: relatedContent().optional(),
+        needsTranslation: needsTranslation(),
       })
       .refine(
         (data) => {

@@ -1,4 +1,5 @@
 import { z, defineCollection } from "astro:content";
+import { needsTranslation } from "../shared";
 
 export const textDetailCollection = defineCollection({
   type: "content",
@@ -7,5 +8,6 @@ export const textDetailCollection = defineCollection({
       title: z.string(),
       featuredImage: image().optional(),
       featuredImageAlt: z.string().optional(),
+      needsTranslation: needsTranslation(),
     }),
 });

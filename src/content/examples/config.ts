@@ -1,4 +1,5 @@
 import { z, defineCollection, reference } from "astro:content";
+import { needsTranslation } from "../shared";
 
 
 /**
@@ -18,6 +19,7 @@ export const examplesCollection = defineCollection({
       relatedReference: z.array(reference("reference")).optional(),
       featuredImage: image(),
       featuredImageAlt: z.string().optional().default(""),
+      needsTranslation: needsTranslation(),
 
       // Optional list of remixes to add to license
       remix: z
