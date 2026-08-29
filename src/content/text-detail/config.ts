@@ -1,8 +1,14 @@
-import { z, defineCollection } from "astro:content";
-import { needsTranslation } from "../shared";
+import { defineCollection } from "astro:content";
+import { z } from "astro/zod";
+import { glob } from "astro/loaders";
+import { generateEntryId, needsTranslation } from "../shared";
 
 export const textDetailCollection = defineCollection({
-  type: "content",
+  loader: glob({
+    pattern: '**/*.mdx',
+    base: "./src/content/text-detail",
+    generateId: generateEntryId,
+  }),
   schema: ({ image }) =>
     z.object({
       title: z.string(),
