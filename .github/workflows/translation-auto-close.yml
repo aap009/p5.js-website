@@ -4,7 +4,7 @@ on:
   pull_request:
     types: [closed]
     branches:
-      - main
+      - 'feature/translation-tracker/auto-close-issue'
     paths:
       - 'src/content/**/es/**'
       - 'src/content/**/hi/**'
